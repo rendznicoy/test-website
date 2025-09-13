@@ -1,4 +1,4 @@
-# Relearn JS Interactive Website
+# Interactive Website
 
 An interactive, modern web project built with HTML, CSS, JavaScript, and Tailwind CSS.  
 Features smooth animations, responsive design, and engaging user interactions.
