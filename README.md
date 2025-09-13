@@ -19,12 +19,6 @@ Features smooth animations, responsive design, and engaging user interactions.
 - JavaScript (ES6+)
 - Font Awesome
 
-## Getting Started
-
-1. Clone or download the repository.
-2. Open `index.html` in your browser.
-3. Make sure Font Awesome is loaded via CDN or local files for icons.
-
 ## Author
 
 - [rendznicoy](https://github.com/rendznicoy)
