@@ -3,34 +3,282 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/interactive.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
-    <title>My test page</title>
+    <title>Interactive Website</title>
 </head>
 
-<body>
-    <img src="./assets/images/2.jpg" alt="My test image" />
-    <p>Instructions for life:</p>
+<body class="font-poppins min-h-screen bg-black text-white">
+    <div class="container mx-auto max-w-4xl px-6 py-8">
+        <!-- Main Content Container -->
+        <div class="bg-gray-900 rounded-3xl p-8 shadow-2xl border-2 border-gray-700">
 
-    <ul>
-        <li>Eat</li>
-        <li>Sleep</li>
-        <li>Repeat</li>
-    </ul>
-    <!-- 4 heading levels: -->
-    <h1>My main title</h1>
-    <h2>My top level heading</h2>
-    <h3>My subheading</h3>
-    <h4>My sub-subheading</h4>
-    <a href="https://portfolio-rene.vercel.app/">
-        Portfolio
-    </a>
-    <button>Change user</button>
+            <!-- Header Section -->
+            <header class="text-center mb-12 animate-fade-in">
+                <h1 id="main-heading" class="text-5xl md:text-6xl font-bold mb-4 
+                           hover:scale-105 transition-transform duration-300 cursor-pointer text-white">
+                    Hello Wrold!
+                </h1>
+                <div class="flex justify-center">
+                    <p
+                        class="text-gray-300 text-lg font-medium bg-gray-800 inline-block px-6 py-3 rounded-lg border-2 border-gray-600 shadow-md">
+                        <span class="mr-2"><i class="fa-solid fa-computer-mouse"></i></span>Click the heading to change
+                        your name
+                    </p>
+                </div>
+            </header>
+
+            <!-- Image Section -->
+            <div class="flex justify-center mb-12 animate-fade-in">
+                <div class="text-center">
+                    <div class="relative group mb-4">
+                        <img id="main-image" src="./assets/images/Banner Image.png" alt="Interactive image"
+                            class="rounded-2xl shadow-2xl cursor-pointer transform transition-all duration-300 
+                                    group-hover:scale-105 group-hover:shadow-3xl border-4 border-gray-600 max-w-full mx-auto block" />
+                    </div>
+                    <div class="flex justify-center">
+                        <p
+                            class="text-gray-300 font-medium bg-gray-800 inline-block px-6 py-3 rounded-lg border-2 border-gray-600 shadow-md">
+                            <span class="mr-2"><i class="fa-solid fa-image"></i></span>Click the image to switch
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructions Card -->
+            <div class="mb-8 animate-fade-in">
+                <h2 class="text-3xl font-semibold mb-4 text-center text-white">Life Instructions</h2>
+                <div class="flex justify-center mb-6">
+                    <p
+                        class="text-gray-300 text-center font-medium bg-gray-800 inline-block px-6 py-3 rounded-lg border-2 border-gray-600 shadow-md">
+                        <span class="mr-2"><i class="fa-solid fa-list-check"></i></span>Click any instruction to mark as
+                        completed
+                    </p>
+                </div>
+                <ul class="space-y-3 max-w-md mx-auto">
+                    <li class="instruction-item bg-gray-700 rounded-xl p-4 cursor-pointer 
+                              transform transition-all duration-300 hover:bg-gray-600 hover:scale-102 
+                              border-2 border-gray-500 shadow-md">
+                        <span class="text-white font-medium mr-2"><i class="fa-solid fa-utensils"></i></span>Eat
+                    </li>
+                    <li class="instruction-item bg-gray-700 rounded-xl p-4 cursor-pointer 
+                              transform transition-all duration-300 hover:bg-gray-600 hover:scale-102 
+                              border-2 border-gray-500 shadow-md">
+                        <span class="text-white font-medium mr-2"><i class="fa-solid fa-bed"></i></span>Sleep
+                    </li>
+                    <li class="instruction-item bg-gray-700 rounded-xl p-4 cursor-pointer 
+                              transform transition-all duration-300 hover:bg-gray-600 hover:scale-102 
+                              border-2 border-gray-500 shadow-md">
+                        <span class="text-white font-medium mr-2"><i class="fa-solid fa-redo"></i></span>Repeat
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Interactive Button -->
+            <div class="text-center mb-8 animate-fade-in">
+                <div class="mb-4">
+                    <button id="player-button" type="button" class="font-semibold px-8 py-4 rounded-2xl shadow-lg transform transition-all duration-300 
+                                   hover:scale-105 hover:shadow-2xl focus:outline-none active:scale-95 text-lg border-2
+                                   bg-white text-black border-gray-300 hover:bg-gray-100">
+                        Player 1: Rain
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <p
+                        class="text-gray-300 font-medium bg-gray-800 inline-block px-6 py-3 rounded-lg border-2 border-gray-600 shadow-md">
+                        <span class="mr-2"><i class="fa-solid fa-gamepad"></i></span>Click the button to change player
+                        name
+                    </p>
+                </div>
+            </div>
+
+            <!-- Technology Tags -->
+            <div class="mb-8 animate-fade-in">
+                <h3 class="text-2xl font-semibold mb-4 text-center text-white">Technologies Used</h3>
+                <div class="flex justify-center mb-6">
+                    <p
+                        class="text-gray-300 text-center font-medium bg-gray-800 inline-block px-6 py-3 rounded-lg border-2 border-gray-600 shadow-md">
+                        <span class="mr-2"><i class="fa-solid fa-repeat"></i></span>Click any technology tag to reverse
+                        its text
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span id="tech-html"
+                        class="tech-tag bg-gray-700 text-white border-gray-500 px-6 py-3 rounded-2xl border-2 font-medium text-lg cursor-pointer 
+                                   transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gray-600">HTML5</span>
+                    <span id="tech-css"
+                        class="tech-tag bg-gray-700 text-white border-gray-500 px-6 py-3 rounded-2xl border-2 font-medium text-lg cursor-pointer 
+                                   transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gray-600">CSS3</span>
+                    <span id="tech-js"
+                        class="tech-tag bg-gray-700 text-white border-gray-500 px-6 py-3 rounded-2xl border-2 font-medium text-lg cursor-pointer 
+                                   transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gray-600">JavaScript</span>
+                    <span id="tech-tailwind"
+                        class="tech-tag bg-gray-700 text-white border-gray-500 px-6 py-3 rounded-2xl border-2 font-medium text-lg cursor-pointer 
+                                   transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-gray-600">Tailwind
+                        CSS</span>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="animate-fade-in mb-8">
+                <h3 class="text-xl font-semibold mb-4 text-center text-white">Quick Navigation</h3>
+                <div class="flex justify-center mb-4">
+                    <p
+                        class="text-gray-300 text-center font-medium bg-gray-800 inline-block px-6 py-3 rounded-lg border-2 border-gray-600 shadow-md">
+                        <span class="mr-2"><i class="fa-solid fa-link"></i></span>Click links to navigate to different
+                        sections
+                    </p>
+                </div>
+                <ul class="flex flex-wrap justify-center gap-4">
+                    <li><a href="https://portfolio-rene.vercel.app/" target="_blank"
+                            class="nav-link text-gray-300 hover:text-white px-6 py-3 rounded-xl 
+                                          transform transition-all duration-300 hover:bg-gray-700 
+                                          hover:scale-105 font-medium border-2 border-transparent hover:border-gray-500"><i class="fa-solid fa-folder mr-2"></i>Portfolio</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="nav-link text-gray-300 hover:text-white px-6 py-3 rounded-xl 
+                                          transform transition-all duration-300 hover:bg-gray-700 
+                                          hover:scale-105 font-medium border-2 border-transparent hover:border-gray-500"><i
+                                class="fa-solid fa-phone mr-2"></i>Contact</a>
+                    </li>
+                    <li><a href="#about"
+                            class="nav-link text-gray-300 hover:text-white px-6 py-3 rounded-xl 
+                                          transform transition-all duration-300 hover:bg-gray-700 
+                                          hover:scale-105 font-medium border-2 border-transparent hover:border-gray-500"><i
+                                class="fa-solid fa-circle-info mr-2"></i>About</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Contact Section -->
+            <section id="contact"
+                class="animate-fade-in mb-8 bg-gray-800 rounded-3xl p-8 border-2 border-gray-600 shadow-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-white">Contact Information</h3>
+                <div class="max-w-2xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md hover:shadow-lg transition-shadow">
+                            <h4 class="font-semibold text-white mb-3 flex items-center">
+                                <span class="mr-2"><i class="fa-solid fa-envelope"></i></span> Email
+                            </h4>
+                            <p class="text-gray-300">rendzdelosreyes@gmail.com</p>
+                        </div>
+                        <div
+                            class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md hover:shadow-lg transition-shadow">
+                            <h4 class="font-semibold text-white mb-3 flex items-center">
+                                <span class="mr-2"><i class="fa-solid fa-phone"></i></span> Phone
+                            </h4>
+                            <p class="text-gray-300">+63 (999) 198-0065</p>
+                        </div>
+                        <div
+                            class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md hover:shadow-lg transition-shadow">
+                            <h4 class="font-semibold text-white mb-3 flex items-center">
+                                <span class="mr-2"><i class="fa-solid fa-globe"></i></span> Social Media
+                            </h4>
+                            <div class="space-y-2">
+                                <p class="text-gray-300"><i class="fa-brands fa-github mr-2"></i>GitHub:<a
+                                        href="https://github.com/rendznicoy" target="_blank"
+                                        class="text-blue-400 underline hover:text-blue-600 hover:bg-blue-100 hover:scale-105 transition-all duration-200 px-2 py-1 rounded cursor-pointer font-semibold">rendznicoy
+                                    </a></p>
+                                <p class="text-gray-300"><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn:<a
+                                        href="https://www.linkedin.com/in/rainyjane" target="_blank"
+                                        class="text-blue-400 underline hover:text-blue-600 hover:bg-blue-100 hover:scale-105 transition-all duration-200 px-2 py-1 rounded cursor-pointer font-semibold">/in/rainyjane</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md hover:shadow-lg transition-shadow">
+                            <h4 class="font-semibold text-white mb-3 flex items-center">
+                                <span class="mr-2"><i class="fa-solid fa-location-dot"></i></span> Location
+                            </h4>
+                            <p class="text-gray-300">Ormoc City | Cebu City, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about"
+                class="animate-fade-in mb-8 bg-gray-800 rounded-3xl p-8 border-2 border-gray-600 shadow-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-center text-white"><i
+                        class="fa-solid fa-circle-info mr-2"></i>About This Project</h3>
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md mb-6">
+                        <h4 class="font-semibold text-white mb-4 flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-rocket"></i></span> Project Overview
+                        </h4>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            This interactive webpage demonstrates modern web development techniques using HTML, CSS,
+                            JavaScript, and Tailwind CSS.
+                            It features responsive design, smooth animations, and engaging user interactions.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md mb-6">
+                        <h4 class="font-semibold text-white mb-4 flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-star"></i></span> Key Features
+                        </h4>
+                        <ul class="text-gray-300 space-y-2">
+                            <li class="flex items-start"><span class="mr-2">•</span> Interactive life instructions with
+                                completion tracking</li>
+                            <li class="flex items-start"><span class="mr-2">•</span> Dynamic image switching with smooth
+                                transitions</li>
+                            <li class="flex items-start"><span class="mr-2">•</span> Text reversal animations for
+                                technology tags</li>
+                            <li class="flex items-start"><span class="mr-2">•</span> User name personalization with
+                                local memory</li>
+                            <li class="flex items-start"><span class="mr-2">•</span> Responsive design optimized for all
+                                devices</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-700 rounded-xl p-6 border-2 border-gray-500 shadow-md">
+                        <h4 class="font-semibold text-white mb-4 flex items-center">
+                            <span class="mr-2"><i class="fa-solid fa-screwdriver-wrench"></i></span> Technologies Used
+                        </h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center">
+                                <div class="bg-gray-600 rounded-lg p-3 mb-2">
+                                    <span class="text-2xl"><i class="fa-brands fa-html5"></i></span>
+                                </div>
+                                <p class="text-gray-300 text-sm font-medium">HTML5</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-gray-600 rounded-lg p-3 mb-2">
+                                    <span class="text-2xl"><img class="w-8 h-8 justify-center text-center mx-auto"
+                                            src="./assets/images/tailwind.png" alt="Tailwind CSS"></span>
+                                </div>
+                                <p class="text-gray-300 text-sm font-medium">Tailwind CSS</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-gray-600 rounded-lg p-3 mb-2">
+                                    <span class="text-2xl"><i class="fa-brands fa-js"></i></span>
+                                </div>
+                                <p class="text-gray-300 text-sm font-medium">JavaScript</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="bg-gray-600 rounded-lg p-3 mb-2">
+                                    <span class="text-2xl"><i class="fa-solid fa-mobile-alt"></i></span>
+                                </div>
+                                <p class="text-gray-300 text-sm font-medium">Responsive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic Content Area -->
+            <div id="dynamic-content" class="mt-8 space-y-4"></div>
+        </div>
+    </div>
 </body>
 
 </html>
